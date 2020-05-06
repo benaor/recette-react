@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 import './App.css'
 import Header from './components/Header'
 
+
 class App extends Component {
   state = {
-    pseudo: this.props.match.params.pseudo
+    pseudo: this.props.match.params.pseudo,
+    recettes: {}
   }
 
   render () {
