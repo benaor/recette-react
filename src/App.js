@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // CSS
 import './App.css'
+import Header from './components/Header'
 
 class App extends Component {
   state = {
@@ -10,7 +11,8 @@ class App extends Component {
   render () {
     return (
       <div className='box'>
-        <h1>Bonjour {this.state.pseudo}</h1>
+        <Header 
+          pseudo={this.state.pseudo} />
         <div className='cards'>
           <div className='card'>
             <h2>Une Carte</h2>
