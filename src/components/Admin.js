@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import AjouterRecette from "./AjouterRecette"
+import AdminForm from "./AdminForm"
+
 class Admin extends Component {
     render() {
         const { recettes, ajouterRecette, majRecette, chargerExemple } = this.props
@@ -7,7 +9,7 @@ class Admin extends Component {
             <div className="cards">
                 <AjouterRecette ajouterRecette={this.ajouterRecette} />
                 {
-                    Object.keys(recette)
+                    Object.keys(recettes)
                         .map(key => <AdminForm
                             key={key}
                             id={key}
