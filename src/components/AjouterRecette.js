@@ -15,9 +15,14 @@ class AjouterRecette extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        const recette = { ... this.state }
-        this.props.AjouterRecette(recette)
-    } 
+        const recette = { ...this.state }
+        this.props.ajouterRecette(recette)
+        //reset
+        Object.keys(recette).forEach(item => {
+            recette[item] = ''
+        })
+        this.setState({ ...recette })
+    }
 
     render() {
         return (
