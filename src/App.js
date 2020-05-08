@@ -61,6 +61,7 @@ class App extends Component {
           {cards}
         </div>
         <Admin 
+        pseudo={this.state.pseudo}
         recettes={this.state.recettes}
         majRecette={this.majRecette}
         ajouterRecette={this.ajouterRecette}
