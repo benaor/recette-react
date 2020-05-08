@@ -12,6 +12,14 @@ class Admin extends Component {
         chef: null
     }
 
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+                this.handleAuth({ user })
+            }
+        })
+    }
+
     handleAuth = async authData => {
         const box = await base.fetch(this.props.pseudo, { context: this })
 
